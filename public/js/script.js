@@ -46,3 +46,11 @@ var reset = () => {
 socket.on("reset", () => {
   reset()
 })
+
+socket.on("update", (data) => {
+  setYear(data["yearA"], data["yearB"])
+  setScore(data["scoreA"], data["scoreB"])
+  setCurrent(data["current"])
+  setQuestion(data["question"])
+  data["answers"]
+})

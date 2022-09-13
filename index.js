@@ -36,6 +36,11 @@ io.on('connection', (socket) => {
     console.log("reset")
     io.emit("reset")
   })
+
+  socket.on("do-update", (data) => {
+    console.log("update");
+    io.emit("update", data);
+  });
 });
 
 
