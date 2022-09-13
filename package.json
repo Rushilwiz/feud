@@ -1,0 +1,13 @@
+{
+  "name": "feud",
+  "version": "1.0.0",
+  "description": "Family Feud app for Hoco 2022",
+  "main": "index.js",
+  "repository": "git@github.com:Rushilwiz/feud.git",
+  "author": "Rushil Umaretiya <rushilwiz@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.1",
+    "socket.io": "^4.5.2"
+  }
+}
