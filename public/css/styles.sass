@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter&display=swap');
+
+$inter: "Inter", sans-serif
+$bebas: "Bebas Neue", cursive
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  
+.scoreboard
+
+  background: #fefefe
+
+  width: 100vw
+  height: 100vh
+  display: flex
+  align-items: center
+  justify-content: center
+
+  .container
+    width: 80%
+    height: 85%
+
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-around
+
+    .scores
+      width: 100%
+      height: 30%
+
+      display: flex
+      align-items: center
+      justify-content: space-around
+
+      #a
+        border-right: 2px solid black
+      #b
+        border-left: 2px solid black
+
+      .col
+        width: 30%
+        height: 100%
+      
+        div
+          height: 50%
+          width: 100%
+          text-align: center
+          display: flex
+          justify-content: center
+          align-items: center
+
+        .year
+          font-size: 4em
+          font-family: $inter
+        
+        #current
+          font-size: 5em
+          font-family: monospace
+          font-style: italic
+          background: #00b3ff
+          border-radius: 25%
+          color: white
+        
+        .score
+          font-size: 6em
+          font-family: monospace
+        
+        .header
+          color: #cf00da
+          font-family: $bebas
+          font-size: 3em
+
+
+    
+    .board
+      width: 100%
+      height: 70%
+
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: space-around
+
+      .row
+        width: 100%
+        height: 20%
+
+        display: flex
+        justify-content: space-around
+        align-items: center
+
+        .question
+          width: 95%
+          height: 80%
+          border-radius: 25px
+
+          display: flex
+          justify-content: center
+          align-items: center
+          background: #ffae00
+          text-align: center
+
+          h1
+            font-family: $inter
+            width: 80%
+            height: 50%
+            margin: auto auto
+
+        .answer
+          width: 45%
+          height: 90%
+
+          border-radius: 25px
+
+          text-align: center
+          font-family: $inter
+          font-size: 4em
+
+          display: flex
+          justify-content: center
+          align-items: center
+          
+          background: #2193b0
+          background: -webkit-linear-gradient(to top, #2193b0, #6dd5ed)
+          background: linear-gradient(to top, #2193b0, #6dd5ed)
+
+          color: white
+
