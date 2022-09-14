@@ -69,7 +69,6 @@ socket.on("update", (data) => {
 
 socket.on("winner", (data) => {
   winner.style.display = "flex"
-  console.log(data)
   var year
   if (data === "a") year = yearA.innerHTML
   else year = yearB.innerHTML
