@@ -1,5 +1,6 @@
 let socket = io();
 
+const winner = document.getElementById("winner")
 const answers = [...Array(8).keys()].map((i) =>
   document.getElementById("answer" + (i + 1))
 );
@@ -36,11 +37,14 @@ var reset = () => {
   answers.map((answer, i) => {
     setAnswer(i + 1, i + 1);
   });
+  winner.style.display = "none"
 
   setScore(0, 0);
   setYear(2020, 2020);
   setCurrent(0);
   setQuestion("Waiting to continue...");
+  for (let i = 1; i < 9; i++)
+  setAnswer(i, "");
 };
 
 socket.on("reset", () => {
@@ -48,9 +52,26 @@ socket.on("reset", () => {
 })
 
 socket.on("update", (data) => {
+  winner.style.display = "none"
   setYear(data["yearA"], data["yearB"])
   setScore(data["scoreA"], data["scoreB"])
   setCurrent(data["current"])
   setQuestion(data["question"])
-  data["answers"]
+  for (let i = 1; i < 9; i++)
+    setAnswer(i, "");
+    
+  data["answers"].map((e,i) => {
+    setAnswer(i+1, e)
+  })
+})
+
+
+
+socket.on("winner", (data) => {
+  winner.style.display = "flex"
+  console.log(data)
+  var year
+  if (data === "a") year = yearA.innerHTML
+  else year = yearB.innerHTML
+  winner.innerHTML = year + " wins!"
 })

@@ -1,0 +1,25 @@
+{
+    "questions": [
+      {
+        "question": "What's your favorite place to go after school?",
+        "answers": [
+          ["The plaza", 23],
+          ["The mall", 21]
+        ]
+      },
+      {
+        "question": "What's your favorite place to go during school?",
+        "answers": [
+          ["The plaza", 23],
+          ["The mall", 21]
+        ]
+      },
+      {
+        "question": "What's your favorite place to go before school?",
+        "answers": [
+          ["The plaza", 23],
+          ["The mall", 21]
+        ]
+      }
+    ]
+  }

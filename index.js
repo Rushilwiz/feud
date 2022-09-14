@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const http = require('http');
+const { connect } = require('http2');
 const server = http.createServer(app);
 const { Server } = require("socket.io");
 const io = new Server(server);
@@ -32,6 +33,8 @@ app.get('/admin', (req, res) => {
 app.use(express.static("public"))
 
 io.on('connection', (socket) => {
+  console.log("connection " + socket.id)
+
   socket.on("do-reset", () => {
     console.log("reset")
     io.emit("reset")
@@ -40,6 +43,11 @@ io.on('connection', (socket) => {
   socket.on("do-update", (data) => {
     console.log("update");
     io.emit("update", data);
+  });
+
+  socket.on("do-winner", (data) => {
+    console.log("winner " + data);
+    io.emit("winner", data);
   });
 });
 

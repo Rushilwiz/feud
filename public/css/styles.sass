@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter&display=swap')
 
 $inter: "Inter", sans-serif
 $bebas: "Bebas Neue", cursive
@@ -7,9 +7,26 @@ $bebas: "Bebas Neue", cursive
   margin: 0
   padding: 0
   box-sizing: border-box
-  
-.scoreboard
 
+.winner
+  width: 100%
+  height: 100%
+  background: #ffd1dc
+  z-index: 999
+  position: fixed
+  left: 0
+  top: 0
+  overflow: auto
+  display: none
+  font-family: $inter
+  font-size: 4em
+  text-align: center
+  justify-content: center
+  align-items: center
+          
+
+.scoreboard
+  z-index: 1
   background: #fefefe
 
   width: 100vw
